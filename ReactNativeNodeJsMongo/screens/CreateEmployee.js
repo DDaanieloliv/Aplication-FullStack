@@ -42,7 +42,7 @@ const CreateEmployee = ({ navigation, route }) => {
   const [enableshift, setenableShift] = useState(false);
 
   const submitData = () => {
-    fetch('http://192.168.1.9:3000/send-data', {
+    fetch('http://192.168.56.1:3000/send-data', {
       method: 'post',
       headers: {
         'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ const CreateEmployee = ({ navigation, route }) => {
   };
 
   const updateDetails = () => {
-    fetch('http://192.168.1.9:3000/update', {
+    fetch('http://192.168.56.1:3000/update', {
       method: 'post',
       headers: {
         'Content-Type': 'application/json',
@@ -145,6 +145,13 @@ const CreateEmployee = ({ navigation, route }) => {
       method: 'post',
       body: data,
     })
+
+//     // Depois da substituição (assumindo que o servidor local está rodando na porta 3000)
+// fetch('http://seu_endereco_ip:3000/upload', {
+//   method: 'post',
+//   body: data,
+// });
+
       .then((res) => res.json())
       .then((data) => {
         setPicture(data.url);
