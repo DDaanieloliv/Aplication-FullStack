@@ -220,7 +220,8 @@ const CreateEmployee = ({ navigation, route }) => {
           style={styles.inputStyle}
           icon={picture == '' ? 'upload' : 'check'}
           mode="contained"
-          theme={theme}
+          // theme={theme}
+          color={'#e30505'}
           onPress={() => setModal(true)}
         >
           Upload de Imagem
@@ -240,7 +241,8 @@ const CreateEmployee = ({ navigation, route }) => {
             style={styles.inputStyle}
             icon="content-save"
             mode="contained"
-            theme={theme}
+            // theme={theme}
+            color={'#e30505'}
             onPress={() => submitData()}
           >
             Salvar
@@ -259,7 +261,8 @@ const CreateEmployee = ({ navigation, route }) => {
             <View style={styles.modalButtonView}>
               <Button
                 icon="camera"
-                theme={theme}
+                // theme={theme}
+                color={'#e30505'}
                 mode="contained"
                 onPress={() => pickFromCamera()}
               >
@@ -268,7 +271,8 @@ const CreateEmployee = ({ navigation, route }) => {
               <Button
                 icon="image-area"
                 mode="contained"
-                theme={theme}
+                // theme={theme}
+                color={'#e30505'}
                 onPress={() => pickFromGallery()}
               >
                 Galeria

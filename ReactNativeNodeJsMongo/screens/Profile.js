@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, Linking, Platform, Alert } from 'react-native';
+import { StyleSheet, Text, View, Image, Linking, Platform, Alert , ImageBackground} from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Title, Card, Button } from 'react-native-paper'
 import { MaterialIcons, Entypo } from '@expo/vector-icons'
@@ -33,12 +33,18 @@ const Profile = (props) => {
             Linking.openURL(`telprompt:${phone}`)
         }
     }
+
+    
     return (
         <View style={styles.root}>
             <LinearGradient
-                colors={["#0033ff", "#6bc1ff"]}
+                colors={["#ff0303", "#a15858"]}
                 style={{ height: "20%" }}
+                // Image = 'https://static.todamateria.com.br/upload/co/mu/comunismo-og.jpg?class=ogImageSquare'
             />
+              
+            
+
             <View style={{ alignItems: "center" }}>
                 <Image
                     style={{ width: 140, height: 140, borderRadius: 140 / 2, marginTop: -50 }}
@@ -53,19 +59,19 @@ const Profile = (props) => {
                 Linking.openURL(`mailto:${email}`)
             }}>
                 <View style={styles.cardContent}>
-                    <MaterialIcons name="email" size={32} color="#006aff" />
+                    <MaterialIcons name="email" size={32} color="#e30505" />
                     <Text style={styles.mytext}>{email}</Text>
                 </View>
             </Card>
             <Card style={styles.mycard} onPress={() => openDial()}>
                 <View style={styles.cardContent}>
-                    <Entypo name="phone" size={32} color="#006aff" />
+                    <Entypo name="phone" size={32} color="#e30505" />
                     <Text style={styles.mytext}>{phone}</Text>
                 </View>
             </Card>
             <Card style={styles.mycard}>
                 <View style={styles.cardContent}>
-                    <MaterialIcons name="attach-money" size={32} color="#006aff" />
+                    <MaterialIcons name="attach-money" size={32} color="#e30505" />
                     <Text style={styles.mytext}>{salary}</Text>
                 </View>
             </Card>
@@ -73,7 +79,8 @@ const Profile = (props) => {
                 <Button
                     icon="account-edit"
                     mode="contained"
-                    theme={theme}
+                    // theme={theme}
+                    color={'#e30505'}
                     onPress={() => {
                         props.navigation.navigate("Create",
                             { _id, name, picture, phone, salary, email, position }
@@ -84,7 +91,8 @@ const Profile = (props) => {
                 <Button
                     icon="delete"
                     mode="contained"
-                    theme={theme}
+                    // theme={theme}
+                    color={'#e30505'}
                     onPress={() => deleteEmploye()}>
                     Deletar
             </Button>

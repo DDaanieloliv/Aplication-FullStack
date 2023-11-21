@@ -16,10 +16,10 @@ const store = createStore(reducer);
 const Stack = createStackNavigator();
 
 const myOptions = {
-  title: 'App de Exemplo',
+  title: 'Tinder Chines LuL',
   headerTintColor: 'white',
   headerStyle: {
-    backgroundColor: '#006aff',
+    backgroundColor: '#ff0000',
   },
 };
 function App() {
@@ -30,12 +30,12 @@ function App() {
         <Stack.Screen
           name="Create"
           component={CreateEmployee}
-          options={{ ...myOptions, title: 'Funcionário' }}
+          options={{ ...myOptions, title: '登记' }}
         />
         <Stack.Screen
           name="Profile"
           component={Profile}
-          options={{ ...myOptions, title: 'Perfil do Funcionário' }}
+          options={{ ...myOptions, title: '牛简介' }}
         />
       </Stack.Navigator>
     </View>
